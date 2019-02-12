@@ -86,7 +86,10 @@ def assess_and_pack_orders():
 
             # Prepare the melon
             m.prep()
-
+            # Paint melon in its a winter squash
+            if type(m) == Squash:
+                m.paint()
+                print('>>>> painting green')
             # Evaluate the melon
             presentable = robots.inspectorbot.evaluate(m)
 
